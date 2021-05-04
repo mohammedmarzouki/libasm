@@ -6,7 +6,7 @@
 #    By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/04 13:50:34 by mmarzouk          #+#    #+#              #
-#    Updated: 2021/05/04 15:34:36 by mmarzouk         ###   ########.fr        #
+#    Updated: 2021/05/04 16:27:08 by mmarzouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm -rf a.out
 
 re: fclean all
 
