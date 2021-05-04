@@ -6,7 +6,7 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 16:11:15 by mmarzouk          #+#    #+#             */
-/*   Updated: 2021/05/03 16:19:22 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2021/05/04 15:03:12 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <errno.h>
 # include <unistd.h>
 # include <fcntl.h>
+# include <stdio.h>
 
 int        ft_write(int fd, char *buff, size_t len);
 int        ft_read(int fd, char *buff, size_t len);

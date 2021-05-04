@@ -6,7 +6,7 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 16:11:08 by mmarzouk          #+#    #+#             */
-/*   Updated: 2021/05/04 13:49:46 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2021/05/04 15:39:55 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void test_read(void)
 {
     char buff[5];
     
-    buff[5] = 0;
+    buff[4] = 0;
     ft_read(0,buff,4);
     printf("%s\n",buff);
     printf("%s\n",strerror(errno));
@@ -29,7 +29,7 @@ void test_read(void)
 }
 void test_strlen(void)
 {
-    printf("%d\n",ft_strlen("123456789"));
+    printf("%zu\n",ft_strlen("123456789"));
 }
 void test_strcpy(void)
 {
@@ -42,23 +42,23 @@ void test_strcpy(void)
 
 void test_strdup(void)
 {
-    char s = "abcdef";
+    char *s = "abcdef";
     ft_strdup(s);
     free(s);
 }
 void test_strcmp(void)
 {
-    char *s1 = "abcdef";
-    char *s2 = "abcdef";
+    char *s1 = "ytdytkytc";
+    char *s2 = "mhgckgh";
     printf("%d\n",ft_strcmp(s1, s2));
 }
 
 int main()
 {
-    test_write();
-    test_read();
-    test_strlen();
-    test_strcpy();
-    test_strdup();
+    // test_write();
+    // test_read();
+    // test_strlen();
+    // test_strcpy();
+    // test_strdup();
     test_strcmp();
 }

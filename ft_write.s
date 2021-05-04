@@ -1,8 +1,8 @@
 section .text
-    global _ft_read
+    global _ft_write
     extern ___error
 
-_ft_read:
+_ft_write:
     mov rax, 0x2000004 ;to call write
     syscall
     jc _err

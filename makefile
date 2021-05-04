@@ -6,7 +6,7 @@
 #    By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/04 13:50:34 by mmarzouk          #+#    #+#              #
-#    Updated: 2021/05/04 13:55:42 by mmarzouk         ###   ########.fr        #
+#    Updated: 2021/05/04 15:34:36 by mmarzouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,3 +30,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+comp:re
+	gcc main.c libasm.a
+	./a.out
