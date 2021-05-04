@@ -6,7 +6,7 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 16:11:08 by mmarzouk          #+#    #+#             */
-/*   Updated: 2021/05/04 15:39:55 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2021/05/04 16:25:48 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,24 @@ void test_strlen(void)
 }
 void test_strcpy(void)
 {
-    char *name = "el fassi";
+    char *name = "el fassig";
     char *dst = malloc(10);
 
     ft_strcpy(dst, name);
-    printf("%s\n", dst);   
+    printf("%s\n", dst);
+    free(dst);
 }
 
 void test_strdup(void)
 {
     char *s = "abcdef";
-    ft_strdup(s);
+    s = ft_strdup(s);
     free(s);
 }
 void test_strcmp(void)
 {
-    char *s1 = "ytdytkytc";
-    char *s2 = "mhgckgh";
+    char *s1 = "ahgckgh";
+    char *s2 = "ahgckg";
     printf("%d\n",ft_strcmp(s1, s2));
 }
 
@@ -59,6 +60,6 @@ int main()
     // test_read();
     // test_strlen();
     // test_strcpy();
-    // test_strdup();
-    test_strcmp();
+    test_strdup();
+    // test_strcmp();
 }

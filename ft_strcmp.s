@@ -3,19 +3,19 @@ section .text
 
 _ft_strcmp:
     mov rcx, 0
-_while:
+    mov rax, 0
+_loop:
     cmp BYTE[rdi + rcx] , 0
-    je _return
+    je _returns
     cmp BYTE[rsi + rcx] , 0
-    je _return
+    je _returns
     mov dl , BYTE[rsi + rcx]
     cmp BYTE[rdi + rcx] , dl
-    jne _return
+    jne _returns
     inc rcx
-    jmp _while
-_return:
-    mov dl , BYTE[rsi + rcx]
-    sub BYTE[rdi + rcx] , dl
-    mov dl , BYTE[rdi + rcx]
-    movzx rax , dl
+    jmp _loop
+_returns:
+    movzx rbx , BYTE[rsi + rcx]
+    movzx rax, BYTE[rdi + rcx]
+    sub rax , rbx
     ret
